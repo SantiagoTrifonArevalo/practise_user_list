@@ -22,9 +22,9 @@ const printUsers = (userList) => {
                         <p>${user.country}</p>
                      </div>`;
         userSection.appendChild(div);
-    });
+    })
 }
-
+;console.log(userList);
 printUsers(userList);
 
 
@@ -38,10 +38,11 @@ createForm.addEventListener("submit", (event) => {
     const { name, lastname, age, country } = event.target;
     // Aquí se llama a la función "createUser" para crear al usuario:
     userList = createUser(name.value, lastname.value, age.value, country.value, holdUsers);
-
+    
     printUsers(userList);
     createForm.reset();
 });
+
 
 // Formulario para eliminar usuarios por apellido:
 deleteForm.addEventListener("submit", (event) => {
